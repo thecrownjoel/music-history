@@ -1,0 +1,91 @@
+@mixin desktop-sm-down {
+
+	@media screen and (max-width: $break-point-desktop-sm-max) {
+
+		@content;
+	}
+}
+
+@mixin tablet-down {
+
+	@media screen and (max-width: $break-point-tablet-max) {
+
+		@content;
+	}
+}
+
+@mixin phone-down {
+
+	@media screen and (max-width: $break-point-phone-max) {
+
+		@content;
+	}
+}
+
+@mixin phone-sm-down {
+
+	@media screen and (max-width: $break-point-phone-sm) {
+
+		@content;
+	}
+}
+
+@mixin responsive-down($breakpoint) {
+
+	@media screen and (max-width: $breakpoint) {
+
+		@content;
+	}
+}
+
+@mixin responsive-up($breakpoint) {
+
+	@media screen and (min-width: $breakpoint) {
+
+		@content;
+	}
+}
+
+
+@function rem($size, $font-size: $html-font-size) {
+	$rem-size: $size / $font-size;
+
+	@return #{$rem-size}rem;
+}
+
+@function line-height($line-height, $font-size) {
+	$line-height: $line-height / $font-size;
+
+	@return #{$line-height};
+}
+
+@function letter-spacing($spacing) {
+	$letter-spacing: $spacing / 1000;
+
+	@return #{$letter-spacing}em;
+}
+
+@function text-indent($spacing) {
+	$text-indent: ($spacing / 1000) / 2;
+
+	@return #{$text-indent}em;
+}
+
+@mixin placeholder {
+
+	&::-webkit-input-placeholder {
+		@content
+	}
+
+	&:-moz-placeholder {
+		@content
+	}
+
+	&::-moz-placeholder {
+		@content
+	}
+
+	&:-ms-input-placeholder {
+		@content
+	}
+}

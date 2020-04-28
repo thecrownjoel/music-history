@@ -1,0 +1,33 @@
+{
+  "name": "45press_starter",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "normalize-css": "^2.3.1",
+    "postcss": "^7.0.18",
+    "webpack": "^4.41.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "scripts": {
+    "start": "gulp --gulpfile gulpfile.js"
+  },
+  "author": "45PRESS, Inc.",
+  "license": "",
+  "description": "Starter for projects"
+}

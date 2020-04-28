@@ -1,0 +1,136 @@
+@import '../../../node_modules/normalize-css/normalize';
+
+$container-max-width: 1230px;
+$gutter-size: 15px;
+$break-point-desktop-md-max: 1200px;
+$break-point-desktop-sm-max: 1199px;
+$break-point-desktop-sm-min: 992px;
+$break-point-tablet-max: 991px;
+$break-point-tablet-min: 768px;
+$break-point-phone-max: 767px;
+$break-point-phone-sm: 480px;
+
+@mixin hover-focus {
+
+	&:hover,
+	&:focus {
+
+		@content;
+	}
+}
+
+/* General */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+button {
+	text-decoration: none;
+	-webkit-transition: box-shadow 250ms linear, color 250ms linear, background-color 250ms linear, border-width 250ms linear, border-color 250ms linear, opacity 250ms linear;
+	transition: box-shadow 250ms linear, color 250ms linear, background-color 250ms linear, border-width 250ms linear, border-color 250ms linear, opacity 250ms linear;
+
+	&:hover,
+	&:focus {
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+button,
+input[type="submit"] {
+	-webkit-transition: color 250ms linear, background-color 250ms linear, border-color 250ms linear, opacity 250ms linear;
+	transition: color 250ms linear, background-color 250ms linear, border-color 250ms linear, opacity 250ms linear;
+
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: $container-max-width;
+	padding: 0 $gutter-size;
+	width: 100%;
+}
+
+/* Media */
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+iframe,
+object,
+embed,
+video {
+	border: 0;
+	display: block;
+	max-width: 100%;
+}
+
+.embed-container {
+	height: 0;
+	max-width: 100%;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+
+	iframe,
+	object,
+	embed {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+/* Helpers */
+.sr-only, .screen-reader-text {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.sr-only-focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+.clearfix {
+
+	&::after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
+}
